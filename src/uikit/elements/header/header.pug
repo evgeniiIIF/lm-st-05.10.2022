@@ -1,0 +1,57 @@
+mixin header(opts)
+  header.header
+    .container
+      .header__body
+        .header__logo
+          +logo(opts)
+        .header__menu.menu.js-menu
+          .menu__icon.icon-menu
+            .icon-menu__body
+              span
+          .menu__body
+            nav.menu__nav
+              ul.menu__list
+                each item in opts.menuItems
+                  if(item.submenuItems)
+                    li.menu__item.item-menu.item-menu--has-submenu.js-item-menu--has-submenu
+                      .item-menu__body
+                        .item-menu__link.type-body= item.text
+                        .item-menu__arrow
+                          +arrow-svg({name: 'expand-more', fill: '#1F2041', opacity: '0.5'})
+                      ul.item-menu__submenu.submenu
+                        each itemSubmenu in item.submenuItems
+                          li.submenu__item
+                            a.submenu__link.type-body(href=(itemSubmenu.href))= itemSubmenu.text
+                  else
+                    li.menu__item.item-menu
+                      a.item-menu__link.type-body(href=(item.href))= item.text
+            .header__buttons
+              .btn.header__button-sign-in
+                +button-border(opts.buttonSingIn)
+              .btn.header__button-sign-up
+                +button-color(opts.buttonSingUp)
+
+//- +header({
+//-   logo: {
+//-     href: '#',
+//-     logoIcon: require("../../assets/img/icons/favicon.png"),
+//-     logoText: require("../../assets/img/icons/TOXIN.png"),
+//-   },
+//-   menuItems: [
+//-     {text: 'О нас', href: "нас", submenuItems: false},
+//-     {text: 'Услуги', href: "Услуги", submenuItems: [
+//-       {text: 'Усуга 1', href: "1", submenuItems: false},
+//-       {text: 'Усуга 2', href: "2", submenuItems: false},
+//-       {text: 'Усуга 3', href: "3", submenuItems: false},
+//-     ]},
+//-     {text: 'Вакансии', href: "Вакансии", submenuItems: false},
+//-     {text: 'Новости', href: "Новости", submenuItems: false},
+//-     {text: 'Соглашения', href: "Соглашения", submenuItems: false},
+//-   ],
+//-   buttonSingIn:{
+//-     text: 'Войти'
+//-   },
+//-   buttonSingUp:{
+//-     text: 'зарегистрироваться'
+//-   }
+//- })

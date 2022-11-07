@@ -1,0 +1,26 @@
+@import "../../assets/shared.scss";
+@import "../../uikit/head/head.scss";
+@import "../../uikit/colors-and-type/colors-and-type.scss";
+
+// elements
+
+@import "../../uikit/elements/elements-page/elements-page.scss";
+
+// cards
+@import "../../uikit/cards/cards-page/cards-page.scss";
+
+// styles
+.form-elements {
+  display: flex;
+  padding: 50px 10px;
+  column-gap: 30px;
+  min-height: 100%;
+
+  &__column {
+    @include mb(30px);
+    flex: 0 1 33.333%;
+  }
+}
+.page-blocks {
+  @include mb(30px);
+}

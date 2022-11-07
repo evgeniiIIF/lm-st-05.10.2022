@@ -1,0 +1,14 @@
+.range-slider {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__values {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $dark-50;
+  }
+}

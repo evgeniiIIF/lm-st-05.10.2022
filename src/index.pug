@@ -1,0 +1,97 @@
+extends ./assets/main.pug
+
+block variables
+	- var title = 'Toxin';
+	- var description = 'Бронирование отелей';
+	//- - var pageClass = 'show-sidebar';
+block head
+	link(rel="stylesheet", href="./assets/css/index.css")
+
+block scripts
+	script(src="./assets/js/index.js") 
+	
+block content
+	main.main
+		.banner
+			.banner__image.ibg
+				img(src="./assets/img/banner/banner.jpg", alt="banner")
+			.banner__container.container
+				.banner__body
+					.banner__form
+						+find-room({
+							title: 'Найдём номера под ваши пожелания',
+							drop1:{
+								js: false, 
+								readonly:true,
+								dropdownId: 'drop1',
+								label: 'прибытие', 
+								type: 'text', 
+								placeholder: 'ДД.ММ.ГГГГ', 
+								tabindex: 1,
+								arrowSvg: {
+									name: 'expand-more', 
+									fill: '#1F2041',
+									opacity: '0.5'
+								}
+							},
+							drop2: {
+								js: false, 
+								readonly:true,
+								dropdownId: 'drop2',
+								label: 'выезд', 
+								type: 'text', 
+								placeholder: 'ДД.ММ.ГГГГ', 
+								tabindex: 1,
+								arrowSvg: {
+									name: 'expand-more', 
+									fill: '#1F2041',
+									opacity: '0.5'
+								}
+							},
+							iqDropdown:{
+								js: true,
+								id: 'guests', 
+								dropdownId: 'drop3',
+								label: 'гости', 
+								type: 'text',
+								placeholder: 'Сколько гостей', 
+								arrowSvg: {
+									name: 'expand-more', 
+									fill: '#1F2041',
+									opacity: '0.5'
+								},
+								buttons: true, 
+								items: [
+									{ text:'взрослые', id: 'item1', itemCount: 0 },
+									{ text:'дети', id: 'item2', itemCount: 0 },
+									{ text:'младенцы', id: 'item3', itemCount: 0 },
+								],
+								tabindex: 1
+							},
+							buttonArrow:{
+								text: 'подобрать номер',
+							},
+						})
+					p.banner__text.type-body Лучшие номера для вашей работы, отдыха и просто вдохновения
+
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+		//- include ./modules/module/module.pug
+
+
+
+	//- 	script(type='text/javascript').
+	//- 		const foo = true;
+	//- 		let num = 15;
+	//- 		let bar = function(a) {return a-5};
+	//- 		if (foo) 
+	//- 			bar(num)
+	//- 			console.log("xxxx",num,bar(num))

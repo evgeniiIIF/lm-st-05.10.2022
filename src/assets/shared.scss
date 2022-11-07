@@ -1,0 +1,50 @@
+@import "./scss/smart-grid-desktop.scss";
+@import "./scss/reset.scss";
+@import "./scss/mixins.scss";
+@import "./scss/fonts.scss";
+@import "./colors.scss";
+
+// ================UIkit=================
+@import "../uikit/elements/elements-page/elements-page.scss";
+@import "../uikit/colors-and-type/colors-and-type.scss";
+@import "../uikit/cards/cards-page/cards-page.scss";
+
+// =================================
+
+html {
+  font-size: $mainFontSize;
+  font-family: $mainFontFamily;
+  color: $mainFontColor;
+  background: $bg-color;
+}
+
+body {
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  @include container();
+  box-sizing: content-box;
+}
+
+.ibg {
+  position: relative;
+  & img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,10 @@
+mixin logo(opts)
+  a.logo(href= (opts.logo.href))
+    img(src=(opts.logo.logoIcon), alt="logo")
+    img(src=(opts.logo.logoText), alt="logo")
+
+//- logo:{
+//-   href: 'https://changeme',
+//-   logoIcon: require("../../assets/img/icons/favicon.png"),
+//-   logoText: require("../../assets/img/icons/TOXIN.png"),
+//- },

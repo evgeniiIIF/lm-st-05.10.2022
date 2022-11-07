@@ -1,0 +1,103 @@
+@import "./smart-grid-desktop.scss";
+@import "./vars.scss";
+@import "./reset.scss";
+@import "./mixins.scss";
+@import "../fonts.scss";
+
+html {
+  font-size: $mainFontSize;
+
+  @include xs(font-size, 11px);
+  @include sm(font-size, 12px);
+  @include md(font-size, 13px);
+  @include lg(font-size, $maxFontSize);
+  // @include xl(font-size, 15px);
+  // @include xxl(font-size, 16px);
+
+  // @include xs($maxWidth, 425px);
+  // @include sm($maxWidth, 576px);
+  // @include md($maxWidth, 768px);
+  // @include lg($maxWidth, 992px);
+  // @include xl($maxWidth, 1200px);
+  // @include xxl($maxWidth, 1400px);
+
+  // @media (max-width: 425px) {
+  // 	font-size: 2px;
+  // }
+  // @media (max-width: 576px) {
+  // 	font-size: 4px;
+  // }
+  // @media (max-width: 767px) {
+  // 	font-size: 6px;
+  // }
+  // @media (max-width: 992px) {
+  // 	font-size: 8px;
+  // }
+  // @media (max-width: 1200px) {
+  // 	font-size: 10px;
+  // }
+  // @media (max-width: 1400px) {
+  // 	font-size: 10px;
+  // }
+}
+
+body {
+  font-family: $mainFont;
+  background: $default-color;
+  color: $mainFontColor;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  @include container();
+  box-sizing: content-box;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.3s ease 0s;
+  cursor: pointer;
+
+  &--bgcolor,
+  &--border {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 153%;
+    letter-spacing: 0.2px;
+    border: 3px solid transparent;
+    transition: background 0.3s ease 0s, color 0.3s ease 0s;
+  }
+  &--bgcolor {
+    background: #ed3024;
+    color: #ffffff;
+
+    &:hover {
+      border-color: #252b42;
+      background: #ffffff;
+      color: #252b42;
+    }
+  }
+  &--border {
+    border: 1px solid #0d5c63;
+    color: #0d5c63;
+
+    &:hover {
+      border: 3px solid #fff;
+      background: #0d5c63;
+      color: #fff;
+    }
+  }
+}

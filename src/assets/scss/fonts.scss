@@ -1,0 +1,14 @@
+// https://transfonter.org/ - converter
+// https://fonts.google.com/
+
+// .ttf .woff .woff2 .svg
+
+@import "../fonts/stylesheet.scss";
+@import "../colors.scss";
+
+$mainFontFamily: "Montserrat", sans-serif;
+$mainFontColor: $dark-100;
+$mainFontSize: 10px;
+$maxFontSize: 14px;
+$mainFontWeight: 400;
+$mainLineHeight: 1.4;

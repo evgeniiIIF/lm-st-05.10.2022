@@ -1,0 +1,106 @@
+include ../uikit/elements/elements-page/elements-page.pug
+include ../uikit/cards/cards-page/cards-page.pug
+
+
+
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title #{title}
+		meta(name="description", content=description)
+		block head
+	body(class=pageClass)
+		.wrapper
+			+header({
+				logo: {
+					href: '#',
+					logoIcon: "./assets/img/icons/favicon.png",
+					logoText: "./assets/img/icons/TOXIN.png",
+				},
+				menuItems: [
+					{text: 'О нас', href: "http://нас", submenuItems: false},
+					{text: 'Услуги', href: "http://Услуги", submenuItems: [
+						{text: 'Услуга 1', href: "http://1", submenuItems: false},
+						{text: 'Услуга 2', href: "http://2", submenuItems: false},
+						{text: 'Услуга 3', href: "http://3", submenuItems: false},
+					]},
+					{text: 'Вакансии', href: "http://Вакансии", submenuItems: false},
+					{text: 'Новости', href: "http://Новости", submenuItems: false},
+					{text: 'Соглашения', href: "http://Соглашения", submenuItems: false},
+				],
+				buttonSingIn:{
+					text: 'Войти'
+				},
+				buttonSingUp:{
+					text: 'зарегистрироваться'
+				}
+			})
+			block content
+			+footer({
+				logo:{
+					href: 'https://changeme',
+					logoIcon: "./assets/img/icons/favicon.png",
+					logoText: "./assets/img/icons/TOXIN.png",
+				},
+				blockLogoText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+				navItems:[
+					{
+						title: "навигация", 
+						links: [
+							{href: 'http://chagneme', text: 'О нас'},
+							{href: 'http://chagneme', text: 'Новости'},
+							{href: 'http://chagneme', text: 'Служба поддержки'},
+							{href: 'http://chagneme', text: 'Услуги'},
+						]
+					},
+					{
+						title: "о нас", 
+						links: [
+							{href: 'http://chagneme', text: 'О сервисе'},
+							{href: 'http://chagneme', text: 'Наша команда'},
+							{href: 'http://chagneme', text: 'Вакансии'},
+							{href: 'http://chagneme', text: 'Инвесторы'},
+						]
+					},
+					{
+						title: "Служба поддержки", 
+						links: [
+							{href: 'http://chagneme', text: 'Соглашения'},
+							{href: 'http://chagneme', text: 'Сообщества'},
+							{href: 'http://chagneme', text: 'Связь с нами'},
+						]
+					}
+				],
+				subscribe: {
+					title: 'Подписка',
+					text: 'Получайте специальные предложения и новости сервиса',
+					field: {
+						js: false, 
+						dropdownId: false,
+						label: false, 
+						type: 'email', 
+						placeholder: 'Email', 
+						tabindex: 1,
+						arrowSvg: {
+							name: 'arrow-forward', 
+							fill: "#BC9CFF",
+							opacity: null,
+						}
+					}
+				},
+				copy:{
+					text: 'Copyright © 2018 Toxin отель. Все права защищены.',
+					icons:[
+						{src: './assets/img/social/facebook.svg', alt: 'facebook'},
+						{src: './assets/img/social/instagramm.svg', alt: 'instagramm'},
+						{src: './assets/img/social/twiter.svg', alt: 'twiter'},
+					]
+				}
+			})
+			
+		block scripts

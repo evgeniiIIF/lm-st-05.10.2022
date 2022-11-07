@@ -1,0 +1,19 @@
+mixin checkbox-list(opts)
+  ul.checkbox-list
+    each item in opts.items
+      li.checkbox-list__item.item-checkbox
+        label.item-checkbox__label
+          input(type="checkbox" checked=item.isChecked)
+          .item-checkbox__pseudo-flag
+          p.item-checkbox__text.type-body= item.text
+
+//- +checkbox-list({
+//-   items:[
+//-     {text:'Завтрак', isChecked: false},
+//-     {text:'Письменный стол', isChecked: true},
+//-     {text:'Стул для кормления', isChecked: true},
+//-     {text:'Кроватка', isChecked: true},
+//-     {text:'Телевизор', isChecked: false},
+//-     {text:'Шампунь', isChecked: false},
+//-   ]
+//- })

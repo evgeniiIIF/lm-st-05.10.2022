@@ -1,0 +1,17 @@
+mixin field(opts)
+  .field
+    if(opts.label)
+      label.field__label.type-h3
+        span.field__label-text=(opts.label)
+        input.field__input.type-body(type=(opts.type) name=opts.dataName placeholder=(opts.placeholder) tabindex=(opts.tabindex)  required=(opts.required))
+    else
+      input.field__input.type-body(type=(opts.type) name=opts.dataName placeholder=(opts.placeholder) tabindex=(opts.tabindex)  required=(opts.required))
+
+//- +field({
+//-   label: 'text field',
+//-   type: 'email',
+//-   name: 'text-field',
+//-   placeholder: 'Email',
+//-   tabindex: 1,
+//-   required: true,
+//- })
