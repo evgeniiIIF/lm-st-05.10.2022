@@ -1,4 +1,4 @@
-extends ./assets/main.pug
+extends ./uikit/templates/main.pug
 
 block variables
 	- var title = 'Toxin';
@@ -7,14 +7,13 @@ block variables
 block head
 	link(rel="stylesheet", href="./assets/css/index.css")
 
-block scripts
-	script(src="./assets/js/index.js") 
+
 	
 block content
 	main.main
 		.banner
 			.banner__image.ibg
-				img(src="./assets/img/banner/banner.jpg", alt="banner")
+				img(src="./assets/img/fullMainImage/fullMainImage.jpg", alt="fullMainImage")
 			.banner__container.container
 				.banner__body
 					.banner__form
@@ -95,3 +94,5 @@ block content
 	//- 		if (foo) 
 	//- 			bar(num)
 	//- 			console.log("xxxx",num,bar(num))
+block scripts
+	script(src="./assets/js/index.js") 

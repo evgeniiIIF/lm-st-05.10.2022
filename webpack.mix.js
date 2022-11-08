@@ -42,6 +42,7 @@ mix.sass("./src/assets/css/index.scss", "./assets/css");
 mix.sass("./src/assets/css/uikit-page.scss", "./assets/css");
 
 mix.copyDirectory("./src/assets/fonts", "./dist/assets/fonts");
+
 mix.imagemin(
   {
     patterns: [
